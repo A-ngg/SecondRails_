@@ -11,7 +11,7 @@ class CartItemsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create cart item" do
     item = items(:one) # Assuming you have a fixture for items
-    assert_difference('CartItem.count', 1) do
+    assert_difference("CartItem.count", 1) do
       post cart_items_url, params: { item_id: item.id }
     end
     assert_redirected_to cart_items_url
@@ -19,7 +19,7 @@ class CartItemsControllerTest < ActionDispatch::IntegrationTest
 
   test "should destroy cart item" do
     cart_item = cart_items(:one) # Assuming you have a fixture for cart items
-    assert_difference('CartItem.count', -1) do
+    assert_difference("CartItem.count", -1) do
       delete cart_item_url(cart_item)
     end
     assert_redirected_to cart_items_url
