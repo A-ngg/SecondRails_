@@ -1,0 +1,12 @@
+<h1>Products</h1>
+
+<ul>
+  <% @products.each do |product| %>
+    <li>
+      <%= product.name %> - $<%= product.price %>
+      <%= button_to "Add to Cart", cart_items_path(product_id: product.id), method: :post %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "View Cart", cart_items_path %>
