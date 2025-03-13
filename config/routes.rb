@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   root "products#index"
-  
-  resources :products, only: [:index]
-  resources :cart_items, only: [:index, :create, :destroy]
+
+  resources :products, only: [ :index ]
+  resources :cart_items, only: [ :index, :create, :destroy ]
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
